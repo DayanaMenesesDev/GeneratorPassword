@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/3cf8ee9758.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main class="main">
+        <section class="main__section-password">
+            <form id="formGeneratedPassword" novalidate method="post">
+                <div id="displayPW">
+                    <input readonly type="text" id="generatedPassword">
+                    <input type="range" id="meterPW" min="0" max="4">
+                </div>
+                <button class="btnGeneratedPW"><i id="regeneratePW" class="fa-solid fa-arrows-rotate"></i></button>
+                <button class="btnGeneratedPW"><i id="copyPW" class="fa-regular fa-copy"></i></button>
+            </form>
+            <form id="configGeneratePassword">
+                <h2>CONFIGURAR EL GENERADOR DE CONTRASEÑAS</h2>
+                <section>
+                    <h3>Longitud de la contraseña</h3>
+                    <article>
+                        <div>
+                            <button id="btnMinimize"><i class="fa-solid fa-minus"></i></button>
+                            <input id="container__pwLength" type="number" min="1" max="50" step="1">
+                            <button id="btnMiximize"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                        <input value="6" id="pwLength" type="range" min="1" max="50">
+                    </article>
+                    <article>
+                        <div>
+                            <label for="letterMay">Mayusculas</label>
+                            <input checked type="checkbox" name="" id="letterMay">
+                        </div>
+                        <div>
+                            <label for="letterMin">Minusculas</label>
+                            <input checked type="checkbox" name="" id="letterMin">
+                        </div>
+                        <div>
+                            <label for="numbers">Numeros</label>
+                            <input checked type="checkbox" name="" id="numbers">
+                        </div>
+                        <div>
+                            <label for="signs">Signos</label>
+                            <input checked type="checkbox" name="" id="signs">
+                        </div>
+                    </article>
+                </section>
+            </form>
+        </section>
+    </main>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/zxcvbn@4.4.2/dist/zxcvbn.js"></script>
+</body>
+</html>

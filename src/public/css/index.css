@@ -1,0 +1,115 @@
+.main {
+  & .main__section-password {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    & #formGeneratedPassword {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 300px;
+      & #displayPW {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          margin: 0;
+          padding: 0;
+          background-color: black;
+          border-radius: 20px;
+          overflow: hidden;
+          position: relative;
+          & #meterPW {
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            bottom: -5px;
+          }
+      }
+      & #generatedPassword {
+        background-color: rgb(0, 0, 0);
+        width: 100%;
+        height: 2em;
+        border-radius: 20px;
+        text-align: center;
+        font-size: 1.2em;
+      }
+      & > button > i {
+        font-size: 1.5em;
+      }
+      & button:nth-child(2) {
+        padding: 15px;
+      }
+    }
+
+    #configGeneratePassword {
+      width: 300px;
+      height: auto;
+      margin-top: 30px;
+      & h2 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      & section {
+        border-radius: 20px;
+        background-color: rgba(0, 170, 255, 0.69);
+        box-shadow: 0 0 10px rgb(0, 170, 255);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & h3 {
+          margin: 10px 0;
+          font-size: 1.5em;
+        }
+        & article:nth-child(2) {
+          text-align: center;
+          & div:nth-child(1) {
+            margin: 20px 0;
+            & input {
+                width: 2em;
+                height: auto;
+                text-align: center;
+                padding: 5px;
+            }
+            & button {
+                background-color: rgb(6, 6, 6);
+                border-radius: 50%;
+                padding: 10px 12px;
+                margin: 0 10px;
+            }
+          }
+        }
+        & article:nth-child(3) {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          & div {
+            display: flex;
+            flex-direction: row-reverse;
+            padding: 0 10px;
+            & label {
+              padding: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .main {
+    & .main__section-password {
+      #configGeneratePassword {
+        width: 500px;
+      }
+    }
+  }
+}

@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./public/css/normalize.css">
-    <link rel="stylesheet" href="./public/css/index.css">
+    <link rel="stylesheet" href="./src/public/css/normalize.css">
+    <link rel="stylesheet" href="./src/public/css/index.css">
     <script src="https://kit.fontawesome.com/3cf8ee9758.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <main class="main">
         <section class="main__section-password">
             <form id="formGeneratedPassword" novalidate method="post">
-                <input readonly type="text" id="generatedPassword">
+                <div id="displayPW">
+                    <input readonly type="text" id="generatedPassword">
+                    <input type="range" id="meterPW" min="0" max="4">
+                </div>
                 <button class="btnGeneratedPW"><i id="regeneratePW" class="fa-solid fa-arrows-rotate"></i></button>
                 <button class="btnGeneratedPW"><i id="copyPW" class="fa-regular fa-copy"></i></button>
             </form>
@@ -50,6 +53,7 @@
             </form>
         </section>
     </main>
-    <script src="./public/js/index.js"></script>
+    <script src="./src/public/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/zxcvbn@4.4.2/dist/zxcvbn.js"></script>
 </body>
 </html>
