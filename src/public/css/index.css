@@ -18,7 +18,7 @@
           flex-direction: column;
           margin: 0;
           padding: 0;
-          background-color: black;
+          background-color: #000;
           border-radius: 20px;
           overflow: hidden;
           position: relative;
@@ -91,10 +91,25 @@
           align-items: center;
           & div {
             display: flex;
-            flex-direction: row-reverse;
             padding: 0 10px;
+            width: 50%;
+            & input[type="checkbox"] {
+              display: none; /* Ocultamos el checkbox */
+            }
             & label {
+              width: 100%;/* 
+              border: 1px solid #000; */
+              border-radius: 10px;
               padding: 5px;
+              margin: 5px;
+              transition: text-decoration 0.3s ease; /* Transición suave */
+              text-decoration: line-through;
+              cursor: pointer;
+              text-align: center;
+            }
+            & #letterMay:checked + label, #letterMin:checked + label, #numbers:checked + label, #signs:checked + label {
+              text-decoration: none;
+              background-color: #000;
             }
           }
         }
